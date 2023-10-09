@@ -34,16 +34,24 @@ public class ArrayListDemo {
     }
   }
 
-  // public boolean addPerson(Person[] persons) {
-  //   if (persons == null || persons.length == 0) {
-  //     return false;
+  // public void addPerson(Person[] p) {
+  //   if (p.length == 0) {
+  //     return;
   //   }
-  //   return persons.add(person);
+
+  //   for (Person person : p) {
+  //     if (person != null) {
+  //       System.out.println(person);
+  //       persons.add(person);
+  //     }
+  //   }
   // }
 
   public Person getPerson(int index) {
     return persons.get(index);
   }
+
+  //get many persons from the list = getPersons()
 
   public static void main(String[] args) {
     ArrayListDemo demo = new ArrayListDemo();
