@@ -1,4 +1,4 @@
-package com.soft.example.data_structures;
+package com.soft.example.data_structures.arraylist;
 
 import java.util.ArrayList;
 import java.util.Arrays;

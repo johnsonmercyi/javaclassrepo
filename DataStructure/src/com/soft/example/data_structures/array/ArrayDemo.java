@@ -1,4 +1,4 @@
-package com.soft.example.data_structures;
+package com.soft.example.data_structures.array;
 
 public class ArrayDemo {
 
