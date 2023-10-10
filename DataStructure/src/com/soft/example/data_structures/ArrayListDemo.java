@@ -1,6 +1,7 @@
 package com.soft.example.data_structures;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 import com.soft.example.beans.Person;
@@ -87,7 +88,7 @@ public class ArrayListDemo {
   }
 
   //converting person's arraylist to person array
-  public Person[] arrayListToArray(ArrayList<Person> p){
+  public static Person[] arrayListToArray(ArrayList<Person> p){
     Person personsArray[] = new Person[p.size()];
     for(int i = 0; i < p.size(); i++){
       personsArray[i] = p.get(i);
@@ -119,7 +120,12 @@ public class ArrayListDemo {
     Person mary = new Person("Mary Lee", "123456789", 'F', new Date());
 
     demo.addPerson(john, jane, mary, null);
-    demo.getPersons(1,2,3,4,0,5,6,0);
+    //demo.getPersons(1,2,3,4,0,5,6,0);
+
+    Person personsArray[] = arrayListToArray(demo.getPersons(1,2,3,4,0,5,6,0));
+    System.out.println(Arrays.toString(personsArray));
+
+  
                               
 
   }
