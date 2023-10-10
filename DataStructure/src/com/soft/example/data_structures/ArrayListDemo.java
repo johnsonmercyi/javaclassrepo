@@ -22,14 +22,14 @@ public class ArrayListDemo {
     return persons.add(person);
   }
 
-  public void addPerson(Person ...p) {
+  public void addPersons(Person ...p) {
     if (p.length == 0) {
       return;
     }
     
     for (Person person : p) {
       if (person != null) {
-        System.out.println(person);
+        // System.out.println(person);
         persons.add(person);
       }
     }
@@ -61,27 +61,35 @@ public class ArrayListDemo {
     if(index.length == 0){
       return null;
     }
+    
+    //store filtered indexes here
     int indexHolder[] = new int[index.length];
+
+    // filter indexes
     for(int i=0; i < index.length; i++){
-      if(persons.size() - 1 >= index[i]){
-        indexHolder[i] = index[i];
+      if((persons.size() - 1) >= index[i]){ // checks that the index falls within the valid range
+        indexHolder[i] = index[i]; // A valid index is stored
       }else{
-        indexHolder[i] = -1;
+        indexHolder[i] = -1; // store -1 when index is invalid
       }
     }
 
+    //valid persons list
     ArrayList<Person> holdPersons = new ArrayList<>();
+
+    //fetch persons from list
     for(int i=0; i < indexHolder.length; i++){
-      if(indexHolder.length-1 > indexHolder[i] && indexHolder[i] != -1){ 
-        
-        if(persons.get(indexHolder[i]) != null){
-          Person p = persons.get(indexHolder[i]);
+      
+      if(indexHolder[i] != -1){ // Checks that index isn't -1
+        // if(persons.get(indexHolder[i]) != null){
+          // Person p = persons.get(indexHolder[i]);
           //holdPersons.set(i, p);
-          holdPersons.add(p);
-          System.out.println("index: "+ indexHolder[i]+ " - " + p);
-        }
+          holdPersons.add(persons.get(indexHolder[i]));
+          // System.out.println("index: "+ indexHolder[i]+ " - " + p);
+        // }
       } else{
-        System.out.println(indexHolder[i]+" does not exits");
+        // System.out.println(indexHolder[i]+" does not exits");
+        holdPersons.add(null);
       } 
     }
     return holdPersons;
@@ -119,14 +127,10 @@ public class ArrayListDemo {
     Person jane = new Person("Jane Doe", "123456789", 'F', new Date());
     Person mary = new Person("Mary Lee", "123456789", 'F', new Date());
 
-    demo.addPerson(john, jane, mary, null);
+    demo.addPersons(john, jane, mary, null);
     //demo.getPersons(1,2,3,4,0,5,6,0);
 
     Person personsArray[] = arrayListToArray(demo.getPersons(1,2,3,4,0,5,6,0));
     System.out.println(Arrays.toString(personsArray));
-
-  
-                              
-
   }
 }
