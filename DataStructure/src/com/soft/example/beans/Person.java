@@ -1,18 +1,25 @@
 package com.soft.example.beans;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Person {
+  private UUID id;
   private String name;
   private String phone;
   private char gender;
   private Date birthDate;
 
   public Person(String name, String phone, char gender, Date birthDate) {
+    id = UUID.randomUUID();
     this.name = name;
     this.phone = phone;
     this.gender = gender;
     this.birthDate = birthDate;
+  }
+
+  public UUID getId() {
+    return id;
   }
 
   public String getName() {
