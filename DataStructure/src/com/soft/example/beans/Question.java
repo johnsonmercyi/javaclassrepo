@@ -12,5 +12,8 @@ public class Question {
   private double mark;
 
   //the rest of the code implementation...
-  
+
+  public UUID getId() {
+    return id;
+  }
 }

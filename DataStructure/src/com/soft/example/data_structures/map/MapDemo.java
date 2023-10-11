@@ -29,6 +29,12 @@ public class MapDemo {
     return persons.get(id);
   }
 
+  public void fetchPersons() {
+    for (Person p : persons.values()) {
+      System.out.println(p); 
+    }
+  }
+
   public static void main(String[] args) {
     MapDemo demo = new MapDemo();
 
@@ -37,6 +43,9 @@ public class MapDemo {
     Person jane = demo.addPerson(new Person("Jane Doe", "123456789", 'F', new Date()));
 
     // Testing getPerson method
-    System.out.println("\n" + demo.getPerson(john.getId()));
+    // System.out.println("\n" + demo.getPerson(john.getId()));
+
+    //Testing fetchPerson method
+    demo.fetchPersons();
   }
 }
