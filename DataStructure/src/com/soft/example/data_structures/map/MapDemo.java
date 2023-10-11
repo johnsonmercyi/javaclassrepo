@@ -28,6 +28,13 @@ public class MapDemo {
     }
     return persons.get(id);
   }
+  public void removePerson(UUID id){
+    persons.remove(id);
+  }
+
+  public void replacePerson(UUID id, Person p){
+    persons.replace(id, p);
+  }
 
   public static void main(String[] args) {
     MapDemo demo = new MapDemo();
@@ -38,5 +45,8 @@ public class MapDemo {
 
     // Testing getPerson method
     System.out.println("\n" + demo.getPerson(john.getId()));
+    //demo.removePerson(john.getId());
+    demo.replacePerson(john.getId(), jane);
+    System.out.println("\n" + demo.getPerson(jane.getId()));
   }
 }
