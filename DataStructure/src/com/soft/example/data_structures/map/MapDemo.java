@@ -29,10 +29,16 @@ public class MapDemo {
     return persons.get(id);
   }
   public void removePerson(UUID id){
+    if (id == null || !persons.containsKey(id)) {
+      return;
+    }
     persons.remove(id);
   }
 
   public void replacePerson(UUID id, Person p){
+    if (id == null || !persons.containsKey(id)) {
+      return;
+    }
     persons.replace(id, p);
   }
 
