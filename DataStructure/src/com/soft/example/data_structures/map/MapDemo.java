@@ -28,6 +28,19 @@ public class MapDemo {
     }
     return persons.get(id);
   }
+  public void removePerson(UUID id){
+    if (id == null || !persons.containsKey(id)) {
+      return;
+    }
+    persons.remove(id);
+  }
+
+  public void replacePerson(UUID id, Person p){
+    if (id == null || !persons.containsKey(id)) {
+      return;
+    }
+    persons.replace(id, p);
+  }
 
   public void fetchPersons() {
     for (Person p : persons.values()) {
@@ -45,7 +58,13 @@ public class MapDemo {
     // Testing getPerson method
     // System.out.println("\n" + demo.getPerson(john.getId()));
 
-    //Testing fetchPerson method
+
+    System.out.println("\n" + demo.getPerson(john.getId()));
+    //demo.removePerson(john.getId());
+    demo.replacePerson(john.getId(), jane);
+    System.out.println("\n" + demo.getPerson(jane.getId()));
+
+    // Testing fetchPerson method
     demo.fetchPersons();
   }
 }
