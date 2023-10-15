@@ -1,4 +1,5 @@
 package com.iyke;
+
 import java.util.Objects;
 
 public class Car {
@@ -16,6 +17,7 @@ public class Car {
 
 
     public Car() {
+      this(null, null, null, 0, 0, null, null, 0, null, false, 0);
     }
 
     public Car(String plateNumber, String brand, String model, double price, int tyres, String color, String gearType, int milleage, String energyCat, boolean isSuv, int noOfDoors) {
@@ -198,7 +200,7 @@ public class Car {
     @Override
     public String toString() {
         return "{" +
-            " plateNumber='" + getPlateNumber() + "'" +
+            "plateNumber='" + getPlateNumber() + "'" +
             ", brand='" + getBrand() + "'" +
             ", model='" + getModel() + "'" +
             ", price='" + getPrice() + "'" +

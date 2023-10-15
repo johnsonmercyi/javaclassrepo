@@ -1,11 +1,13 @@
 package com.iyke;
 import java.util.Objects;
 
+//TODO: Fix the toyota class
 public class Toyota extends Car {
     private int engineSize;
 
 
     public Toyota() {
+      
     }
 
 
@@ -26,11 +28,6 @@ public class Toyota extends Car {
 
     public void setEngineSize(int engineSize) {
         this.engineSize = engineSize;
-    }
-
-    public Toyota engineSize(int engineSize) {
-        setEngineSize(engineSize);
-        return this;
     }
 
     @Override
