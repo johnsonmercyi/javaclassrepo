@@ -1,0 +1,28 @@
+class {
+  - states: set of variables = [global, local]
+  - behaviors: set of methods
+
+  - access modifiers:
+    * public: accessible from anywhere
+    * private: Only accessible from within the current class
+    * protected: Accessible by subclasses and classes in same package
+    * Defualt: Accessible by classes in same package
+
+    * method signature:
+      pseudo: access_modifier return_type identifier (params) {
+        // method body
+      }
+
+      code: private void doSomething(String name, int age) {
+        //method body
+      }
+
+  - variables:
+    * global variables:
+        instance variable: Does not contain the static keyword
+        class variable: Must be defined with the static keyword
+        constants: Must be defined with the static & final keyword
+
+    * local variables
+
+}

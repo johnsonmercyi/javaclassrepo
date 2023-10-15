@@ -1,6 +1,7 @@
 package com.soft.demos;
 
 public class Parent {
+  //set of variables is the state of an object
   private String name;
   private int age;
 
@@ -31,5 +32,9 @@ public class Parent {
         "name='" + name + '\'' +
         ", age=" + age +
         '}';
+  }
+
+  private static class SomeOtherParent {
+    //implementation...
   }
 }
