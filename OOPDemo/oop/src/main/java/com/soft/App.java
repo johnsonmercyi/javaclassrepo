@@ -1,15 +1,22 @@
 package com.soft;
 
-import com.soft.demos.Child;
-import com.soft.demos.Parent;
+import com.soft.inheritance.Animal;
+import com.soft.inheritance.Cat;
+import com.soft.inheritance.Dog;
+import com.soft.inheritance.GermanShepherd;
 
 public class App {
   public static void main(String[] args) {
-    Parent c = new Child();
+    Animal animal = new Animal();
+    Animal dog = new Dog();
+    Animal cat = new Cat();
+    Animal gs = new GermanShepherd();
 
-    c.setName(" ");
-    c.setAge(10);
+    // animal.setName("Animal");
+    // animal.setSound("Moooo...");
 
-    System.out.println(c);
+    // System.out.println(cat.getName());
+    // System.out.println(dog.getName());
+    System.out.println(animal);
   }
 }
