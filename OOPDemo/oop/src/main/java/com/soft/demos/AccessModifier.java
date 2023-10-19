@@ -1,7 +1,5 @@
 package com.soft.demos;
 
-import javafx.beans.binding.IntegerBinding;
-
 public class AccessModifier {
   // private int num; // private variable
   // public String name; // public variable
@@ -39,6 +37,7 @@ public class AccessModifier {
    * with a default `age` = `10`
    * @param name The name of this object
    */
+
   public void setDetails(String name) {
     this.setName(name);
     this.age = DEFAULT_AGE;
