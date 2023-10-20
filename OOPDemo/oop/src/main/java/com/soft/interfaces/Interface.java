@@ -6,7 +6,7 @@ public interface Interface {
   public static final int LIMIT = 10;
 
   public Person getPerson(String id);
-  default void setPerson(Person p) {
-    //
-  }
+  // default void setPerson(Person p) {
+  //   //
+  // }
 }

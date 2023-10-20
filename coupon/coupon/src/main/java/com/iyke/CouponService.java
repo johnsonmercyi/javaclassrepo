@@ -10,7 +10,12 @@ public class CouponService implements CouponRepo {
 
     public CouponService(){
         db = new Database();
-        dbCoupons= db.getDbCoupon();
+        dbCoupons = db.getDbCoupon();     
+    }
+
+    //get database
+    public Database getDb() {
+        return db;
     }
 
     @Override
@@ -38,8 +43,11 @@ public class CouponService implements CouponRepo {
     @Override
     //get a single coupon using its id
     public Coupon getCoupon(UUID couponId) {
+        //System.out.println("getCoupon id - " + couponId);
         if(couponId != null){
+            //System.out.println("getCoupon step 2 - " + couponId);
             for(Coupon coupon : dbCoupons){
+                //System.out.println("getCoupon - " + coupon);
                 if(couponId == coupon.getId()){
                     return coupon;
                 }
@@ -54,7 +62,7 @@ public class CouponService implements CouponRepo {
         if(couponId != null){
             for(Coupon coupon : dbCoupons){
                 if(couponId == coupon.getId()){
-                    coupon.setCouponUsedStatus(0);
+                    coupon.setCouponUsedStatus(1);
                     return coupon;
                 }
             } 
