@@ -43,11 +43,8 @@ public class CouponService implements CouponRepo {
     @Override
     //get a single coupon using its id
     public Coupon getCoupon(UUID couponId) {
-        //System.out.println("getCoupon id - " + couponId);
         if(couponId != null){
-            //System.out.println("getCoupon step 2 - " + couponId);
             for(Coupon coupon : dbCoupons){
-                //System.out.println("getCoupon - " + coupon);
                 if(couponId == coupon.getId()){
                     return coupon;
                 }
@@ -75,8 +72,11 @@ public class CouponService implements CouponRepo {
         if(couponId != null){
             for(Coupon coupon : dbCoupons){
                 if(couponId == coupon.getId()){
-                    dbCoupons.remove(coupon);
-                    return coupon;
+                    Coupon deletedCoupon =  coupon;
+                    boolean isRemoved = dbCoupons.remove(coupon);
+                    if (isRemoved){
+                        return deletedCoupon;
+                    }                   
                 }
             } 
         }
