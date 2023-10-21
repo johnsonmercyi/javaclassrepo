@@ -17,7 +17,6 @@ com\soft\abstraction\PostgresDataRepoService.class
 com\soft\App$FibonacciCalculator.class
 com\soft\inheritance\GermanShepherd.class
 com\soft\recursion\Recursion.class
-fibo.class
 com\soft\abstraction\DataRepoService.class
 com\soft\App.class
 com\soft\demos\Parent.class
