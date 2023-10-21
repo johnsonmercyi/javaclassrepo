@@ -13,15 +13,15 @@ public class Database {
     
     //populate Database
     public void populateDb(){
-        Coupon coupon1 = new Coupon("Sure Code", 3.99, LocalDate.of(2023, 9, 15 ));
-        Coupon coupon2 = new Coupon("Rush Hour", 1.99, LocalDate.of(2023, 12, 12));
-        Coupon coupon3 = new Coupon("Black Friday", 3.49, LocalDate.of(2023, 6, 7));
-        Coupon coupon4 = new Coupon("Sure Bet", 2.99, LocalDate.of(2023, 4, 23));
-        Coupon coupon5 = new Coupon("Winter Sales", 4.99, LocalDate.of(2023, 9, 27));
-        Coupon coupon6 = new Coupon("Happy Hour", 0.99, LocalDate.of(2023, 3, 3));
-        Coupon coupon7 = new Coupon("Elegant", 1.99, LocalDate.of(2023, 3, 23));
-        Coupon coupon8 = new Coupon("Consistent", 2.49, LocalDate.of(2023, 6, 15));
-        Coupon coupon9 = new Coupon("Love", 1.99, LocalDate.of(2023, 5, 26));
+        Coupon coupon1 = new Coupon("surecode", 3.99, LocalDate.of(2023, 9, 15 ));
+        Coupon coupon2 = new Coupon("goodhour", 1.99, LocalDate.of(2023, 12, 12));
+        Coupon coupon3 = new Coupon("blackfriday", 3.49, LocalDate.of(2023, 6, 7));
+        Coupon coupon4 = new Coupon("surebet", 2.99, LocalDate.of(2023, 4, 23));
+        Coupon coupon5 = new Coupon("wintersales", 4.99, LocalDate.of(2023, 9, 27));
+        Coupon coupon6 = new Coupon("happyhour", 0.99, LocalDate.of(2023, 3, 3));
+        Coupon coupon7 = new Coupon("elegant", 1.99, LocalDate.of(2023, 3, 23));
+        Coupon coupon8 = new Coupon("consistent", 2.49, LocalDate.of(2023, 6, 15));
+        Coupon coupon9 = new Coupon("love", 1.99, LocalDate.of(2023, 5, 26));
         dbCoupon.add(coupon1);
         dbCoupon.add(coupon2);
         dbCoupon.add(coupon3);
@@ -49,8 +49,5 @@ public class Database {
     public void setDbCoupon(ArrayList<Coupon> dbCoupon) {
         this.dbCoupon = dbCoupon;
     }
-
-    
-
 
 }

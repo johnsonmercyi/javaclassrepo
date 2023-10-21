@@ -13,7 +13,7 @@ public class Coupon {
 
     //Constructor
     public Coupon(String codeName, double discount, LocalDate expDate) {
-        this.codeName = codeName;
+        this.codeName = codeName.trim().toLowerCase();
         this.discount = discount;
         this.expDate = expDate;
         this.id = UUID.randomUUID();
