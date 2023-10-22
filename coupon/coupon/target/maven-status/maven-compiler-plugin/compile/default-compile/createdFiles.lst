@@ -1,6 +1,6 @@
-main/java/com/iyke/Coupon.class
-main/java/com/iyke/Database.class
-main/java/com/iyke/App.class
-main/java/com/iyke/CouponRepo.class
-main/java/com/iyke/CouponService.class
-main/java/com/iyke/AppTest.class
+com/iyke/CouponService.class
+com/iyke/App.class
+com/iyke/Coupon.class
+com/iyke/CouponRepo.class
+com/iyke/AppTest.class
+com/iyke/Database.class

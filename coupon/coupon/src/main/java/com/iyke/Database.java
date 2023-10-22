@@ -66,10 +66,4 @@ public class Database {
     return dbCoupon;
   }
 
-  //⚠️ This is redundant - please remove
-  // set Coupon
-  public void setDbCoupon(ArrayList<Coupon> dbCoupon) {
-    this.dbCoupon = dbCoupon;
-  }
-
 }
