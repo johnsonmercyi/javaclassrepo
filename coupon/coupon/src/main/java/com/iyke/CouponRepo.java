@@ -7,6 +7,7 @@ public interface CouponRepo {
     public ArrayList<Coupon> getCoupons();
     public Coupon getCoupon(String codeName);
     public Coupon deleteCoupon(String codeName);
+    //⚠️ TODO: Take Coupon object and not the fields
     public Coupon createCoupon(String codeName, double discount, LocalDate expDate);
     public boolean modifyCoupon(Coupon newCoupon);
   

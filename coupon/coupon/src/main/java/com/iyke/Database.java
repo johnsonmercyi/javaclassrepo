@@ -33,7 +33,7 @@ public class Database {
     dbCoupon.add(coupon9);
   }
 
-  // save Coupon to db
+  // save Coupon to db - ✅
   public Coupon saveCoupon(Coupon newCoupon) {
     Coupon existingCoupon = null;
     boolean isExist = false;//track to ensure that newCoupon exists
