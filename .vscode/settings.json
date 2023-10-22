@@ -1,5 +1,3 @@
 {
-  "java.project.sourcePaths": [
-    "coupon/coupon/src"
-  ]
+  "java.project.sourcePaths": ["coupon/coupon/src"]
 }

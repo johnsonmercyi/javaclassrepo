@@ -5,11 +5,6 @@ public class Person {
   private int age;
   private char gender;
 
-  private String id;
-  private String code;// SUPERFIRDAY
-  private double discount;
-  private String expDate; // 12/10/2023
-
   public Person(String name, int age, char gender) {
     this.name = name;
     this.age = age;
