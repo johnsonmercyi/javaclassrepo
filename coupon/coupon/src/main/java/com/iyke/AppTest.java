@@ -1,4 +1,4 @@
-package main.java.com.iyke;
+package com.iyke;
 
 //import static org.junit.Assert.assertTrue;
 
