@@ -1,14 +1,15 @@
 package com.iyke;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public interface CouponRepo {
     public ArrayList<Coupon> getCoupons();
     public Coupon getCoupon(String codeName);
     public Coupon deleteCoupon(String codeName);
-    //⚠️ TODO: Take Coupon object and not the fields
-    public Coupon createCoupon(String codeName, double discount, LocalDate expDate);
+    public Coupon createCoupon(Coupon coupon);
     public boolean modifyCoupon(Coupon newCoupon);
+    public Coupon getCoupon(UUID id);
+    public Coupon deleteCoupon(UUID couponId);
   
 }

@@ -29,7 +29,7 @@ public class App {
     // System.out.println("\nDatabase Coupons: " + dbCoupons);
 
     //Testing Create Coupon in CRUD
-    System.out.println(cService.createCoupon("test-coupon", 3.44, LocalDate.of(2023, 9, 15)));
+    System.out.println("\nCreate Couupon: " + cService.createCoupon(new Coupon("test-coupon", 3.44, LocalDate.of(2023, 9, 15))));
     System.out.println("\n\n");
     // System.out.println("\nDatabase Coupons: " + dbCoupons);
 

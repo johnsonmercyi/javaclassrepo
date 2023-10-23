@@ -1,6 +1,5 @@
 package com.iyke;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -23,18 +22,17 @@ public class CouponService implements CouponRepo {
     return db.getDbCoupon();
   }
 
-  // ⚠️ Fix: Check the implemented interface for fix
   // create a coupon and saving to database
   @Override
-  public Coupon createCoupon(String codeName, double discount, LocalDate expDate) {
+  public Coupon createCoupon(Coupon coupon) {
     // check variables to make sure the contain values
-    if (codeName.isBlank() || discount <= 0 || expDate.toString().isBlank()) {
+    if (coupon.getCodeName().isBlank() || coupon.getDiscount() <= 0 || coupon.getExpDate().toString().isBlank()) {
       return null;
     }
     // checking if codeName exist in the DB
-    if (getCoupon(codeName) == null) {
+    if (getCoupon(coupon.getCodeName()) == null) {
       // Save new coupon object to DB to db and return saved coupon
-      return db.saveCoupon(new Coupon(codeName.trim(), discount, expDate));
+      return db.saveCoupon(coupon);
     }
     return null;
   }
@@ -53,9 +51,8 @@ public class CouponService implements CouponRepo {
     return null;
   }
 
-  // ⚠️ We should be implementing this method
-  // Meaning it should be found in the interface
-  // Get a coupon using id - 🟠
+  @Override
+  // Get a coupon using id
   public Coupon getCoupon(UUID id) {
     if (id.toString().isBlank() || id == null)
       return null;
@@ -80,9 +77,8 @@ public class CouponService implements CouponRepo {
     return deleteLogic(getCoupon(codeName));
   }
 
-  // ⚠️ We should be implementing this method
-  // Meaning it should be found in the interface
-  // delete a coupon object from the list - 🟠
+  @Override
+  // delete a coupon object from the list
   public Coupon deleteCoupon(UUID couponId) {
     return deleteLogic(getCoupon(couponId));
   }
