@@ -28,6 +28,11 @@ public class OptionalDemo {
     System.out.println(mappedFruits);
 
     //⚠️ See if you can filter and map to strings through stream chaining
+    List<String> filterMapFruits = fruits.entrySet().stream()
+      .filter(entry -> entry.getKey() < 4)
+      .map(p -> p.getValue() + " is mapped to " + p.getKey())
+      .collect(Collectors.toList());
+      System.out.println(filterMapFruits);
     
   }
 
